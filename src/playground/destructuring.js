@@ -27,6 +27,20 @@ const book = {
     }
 };
 
+// Challenge
 const { title, author, publisher } = book;
 const { name: publisherName = 'Self Published' } = publisher;
 console.log(`"${title}" is an awesome book written by ${author} and published by ${publisherName}.`);
+
+// Array destructuring
+const address = ['44B Anath Deb Lane', 'Kolkata', 'West Bengal', '700037'];
+// const [street, arrCity, state, zip] = address;
+
+// Adding default
+const [, arrCity, state = 'Hyderabad'] = address;
+console.log(`You are in ${arrCity}, ${state}.`);
+
+// Challenge
+const items = ['Coffee (hot)', '10.00', '20.00', '30.00'];
+const [itemName, , priceMedium] = items;
+console.log(`A medium ${itemName} costs Rs. ${priceMedium}.`);
