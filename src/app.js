@@ -1,6 +1,7 @@
-// Section 11 Lesson 101
+// Section 11 Lesson 102
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { addExpense } from './actions/expenses';
@@ -31,4 +32,14 @@ const expenseTwo = store.dispatch(addExpense({
 
 store.dispatch(setTextFilter('water'));
 
-ReactDOM.render(<AppRouter />, document.getElementById('app'));
+setTimeout(() => {
+    store.dispatch(setTextFilter('rent'));
+}, 3000);
+
+const jsx = (
+    <Provider store={store}>
+        <AppRouter />
+    </Provider>
+);
+
+ReactDOM.render(jsx, document.getElementById('app'));
