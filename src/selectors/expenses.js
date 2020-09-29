@@ -1,11 +1,15 @@
 // Get visible expenses
 export default (expenses, { text, sortBy, startDate, endDate }) => {
+    console.log('selector');
+    console.log(expenses);
     return expenses.filter((expense) => {
         
         const startDateMatch = typeof startDate !== 'number' || 
                         expense.createdAt >= startDate;
         const endDateMatch = typeof startDate !== 'number' ||  
                         expense.createdAt <= endDate;
+        console.log(`log >> ${expense.description}`);
+        console.log(expense);
         const textMatch = expense.description.toLowerCase().
             includes(text.toLowerCase());
         

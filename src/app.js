@@ -1,4 +1,4 @@
-// Section 11 Lesson 102
+// Section 11 Lesson 109
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -12,11 +12,11 @@ import './styles/styles.scss';
 
 const store = configureStore();
 
-store.subscribe(() => {
-    const state = store.getState();
-    const visibleExpenses = getVisibleExpenses(state.expenses, state.filter);
-    console.log(visibleExpenses);
-});
+// store.subscribe(() => {
+//     const state = store.getState();
+//     const visibleExpenses = getVisibleExpenses(state.expenses, state.filter);
+//     console.log(visibleExpenses);
+// });
 
 const expenseOne = store.dispatch(addExpense({ 
     description: 'Water bill', 
@@ -36,11 +36,10 @@ const expenseThree = store.dispatch(addExpense({
     createdAt: 10000
 }));
 
-store.dispatch(setTextFilter('water'));
+const state = store.getState();
+const visibleExpenses = getVisibleExpenses(state.expenses, state.filter);
+console.log(visibleExpenses);
 
-setTimeout(() => {
-    store.dispatch(setTextFilter(''));
-}, 3000);
 
 const jsx = (
     <Provider store={store}>
