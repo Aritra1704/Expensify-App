@@ -12,7 +12,6 @@ const EditExpensePage = (props) => {
                 expense={props.expense}
                 
                 onSubmit={(expense) => {
-                    console.log(`EditExpensePage description ${expense.description}`)
                     props.dispatch(editExpense(props.expense.id, expense));
                     props.history.push('/');
                 }}
