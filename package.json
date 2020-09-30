@@ -14,6 +14,7 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
+    "jest": "20.0.4",
     "live-server": "^1.2.0",
     "moment": "2.18.1",
     "node-sass": "4.14.1",
@@ -34,6 +35,8 @@
     "webpack-dev-server": "2.5.1"
   },
   "scripts": {
+    "test-jest": "jest",
+    "jest-watch": "jest --watch",
     "webpack": "webpack",
     "dev-server": "webpack-dev-server",
     "babel_watch": "babel src/App.js --out-file=public/scripts/app.js --presets=env,react --watch",
