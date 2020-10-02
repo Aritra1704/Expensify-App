@@ -1,4 +1,4 @@
-// Section 12 Lesson 120
+// Section 12 Lesson 121
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
