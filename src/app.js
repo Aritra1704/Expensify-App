@@ -1,4 +1,4 @@
-// Section 12 Lesson 126
+// Section 13 Lesson 132
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -19,27 +19,27 @@ const store = configureStore();
 //     console.log(visibleExpenses);
 // });
 
-const expenseOne = store.dispatch(addExpense({ 
-    description: 'Water bill', 
-    amount: 500, 
-    createdAt: 21000 
-}));
+// const expenseOne = store.dispatch(addExpense({ 
+//     description: 'Water bill', 
+//     amount: 500, 
+//     createdAt: 21000 
+// }));
 
-const expenseTwo = store.dispatch(addExpense({ 
-    description: 'Gas Bill', 
-    amount: 700, 
-    createdAt: 2000 
-}));
+// const expenseTwo = store.dispatch(addExpense({ 
+//     description: 'Gas Bill', 
+//     amount: 700, 
+//     createdAt: 2000 
+// }));
 
-const expenseThree = store.dispatch(addExpense({ 
-    description: 'Rent bill', 
-    amount: 15500, 
-    createdAt: 10000
-}));
+// const expenseThree = store.dispatch(addExpense({ 
+//     description: 'Rent bill', 
+//     amount: 15500, 
+//     createdAt: 10000
+// }));
 
-const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filter);
-console.log(visibleExpenses);
+// const state = store.getState();
+// const visibleExpenses = getVisibleExpenses(state.expenses, state.filter);
+// console.log(visibleExpenses);
 
 
 const jsx = (
