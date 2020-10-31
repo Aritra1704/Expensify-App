@@ -1,0 +1,23 @@
+heroku --version
+
+heroku update (to update heroku)
+
+heroku login
+
+heroku login -i
+
+heroku create <app name> (to create heroku app from terminal)
+
+heroku logs
+
+heroku remote -v
+
+git remote rm heroku (to remove heroku from local directory) 
+
+heroku git:remote -a react-course-2-expensify-arp  (to add remote heroku app to ur local directory)
+
+git push heroku master (to push build from git to heroku)
+
+heroku open (to open app from terminal)
+
+
