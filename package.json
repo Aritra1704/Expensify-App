@@ -17,6 +17,7 @@
     "enzyme": "3.0.0",
     "enzyme-adapter-react-16": "1.0.0",
     "enzyme-to-json": "3.0.1",
+    "express": "4.15.4",
     "extract-text-webpack-plugin": "3.0.0",
     "jest": "20.0.4",
     "live-server": "^1.2.0",
@@ -41,6 +42,7 @@
     "webpack-dev-server": "2.5.1"
   },
   "scripts": {
+    "start": "node server/server.js",
     "jest-test": "jest --config=jest.config.json",
     "jest-watch": "jest --config=jest.config.json --watch",
     "jest-update": "jest --config=jest.config.json --updateSnapshot",
@@ -51,10 +53,12 @@
     "babel_play_watch": "babel src/playground/counter_example.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "begin": "live-server public",
     "build_webpack": "webpack --watch",
-    "start": "react-scripts start",
+    
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+
+    "heroku-postbuild": "yarn run build:prod"
   },
   "eslintConfig": {
     "extends": "react-app"

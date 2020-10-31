@@ -25,3 +25,7 @@ yarn-error.log*
 /sample_project
 /src/tests/components/__snapshots__
 
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
