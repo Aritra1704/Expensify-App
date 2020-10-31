@@ -53,10 +53,6 @@
     "babel_play_watch": "babel src/playground/counter_example.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "begin": "live-server public",
     "build_webpack": "webpack --watch",
-    
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
 
     "heroku-postbuild": "yarn run webpack:prod"
   },
